@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import AppError from '../Error/AppError';
-import { users } from '../entity/usersModel';
+import AppError from '../../../../../Shared/Error/AppError';
+import { users } from '@modules/Users/infra/typeorm/entities/usersModel';
 import { hash, compare } from 'bcrypt';
 import { verify, decode, sign } from 'jsonwebtoken';
-import { config } from '../config/authconfig';
+import { config } from '../../../../../config/authconfig';
 
 export const createUser = async (req: Request, res: Response): Promise<Response> => {
   const userModelORM = getRepository(users);

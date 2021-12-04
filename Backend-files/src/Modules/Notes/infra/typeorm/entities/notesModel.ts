@@ -7,7 +7,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from 'typeorm';
-import { users } from './usersModel';
+import { users } from '@modules/Users/infra/typeorm/entities/usersModel';
 
 @Entity('notes')
 export class notes {
@@ -36,3 +36,5 @@ export class notes {
   @UpdateDateColumn()
   updateAt: Date;
 }
+
+export default notes;
