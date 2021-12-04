@@ -58,4 +58,6 @@ export const ButtonNewNote = styled.button`
   }
 `;
 
-export const NotesContainer = styled.div``;
+export const NotesContainer = styled.div`
+  padding: 4rem 2rem;
+`;

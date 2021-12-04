@@ -6,6 +6,7 @@ import { Container, Header, Section, UserInfo, ButtonNewNote, NotesContainer } f
 import ButtonComponent from '../../components/button';
 import { useAuth } from '../../hooks/useAuth';
 import { Button } from '../../components/button/style';
+import { NoteComponent } from '../../components/Note';
 
 const Dashboard: React.FC = () => {
   const { signOut, user } = useAuth();
@@ -36,19 +37,9 @@ const Dashboard: React.FC = () => {
         </ButtonNewNote>
       </Section>
       <NotesContainer>
-        <Notes>
-          <InfoNote>
-            <h1>levar o cachorro para passear</h1>
-            <p>levar o cachorro para passear depois de acabar as tarefas</p>
-            <Tags>
-              <span>Rotina</span>
-            </Tags>
-          </InfoNote>
-          <Action>
-            <button>Delete</button>
-            <CreationDateNote />
-          </Action>
-        </Notes>
+        <NoteComponent />
+        <NoteComponent />
+        <NoteComponent />
       </NotesContainer>
     </Container>
   );
